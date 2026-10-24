@@ -376,4 +376,23 @@ document.addEventListener('keydown', (event) => {
         event.preventDefault();
         hardDrop();
     }
+
+    // Находим кнопки
+const btnLeft = document.getElementById('btn-left');
+const btnRight = document.getElementById('btn-right');
+const btnRotate = document.getElementById('btn-rotate');
+const btnDown = document.getElementById('btn-down');
+const btnDrop = document.getElementById('btn-drop');
+
+// Функция-помощник, чтобы кнопки не вызывали зум и скролл на телефоне
+function preventZoom(e) {
+    if (e) e.preventDefault();
+}
+
+// Привязываем действия к кнопкам
+if (btnLeft) btnLeft.addEventListener('click', (e) => { preventZoom(e); move(-1); });
+if (btnRight) btnRight.addEventListener('click', (e) => { preventZoom(e); move(1); });
+if (btnRotate) btnRotate.addEventListener('click', (e) => { preventZoom(e); rotate(); });
+if (btnDown) btnDown.addEventListener('click', (e) => { preventZoom(e); drop(true); });
+if (btnDrop) btnDrop.addEventListener('click', (e) => { preventZoom(e); hardDrop(); });
 });
