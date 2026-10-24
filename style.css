@@ -120,11 +120,6 @@ body {
     font-weight: bold;
 }
 
-/* Скрываем мобильные кнопки по умолчанию (на ПК они не нужны) */
-#mobile-controls {
-    display: none; 
-}
-
 /* Показываем их только на экранах уже 768px (планшеты и телефоны) */
 @media (max-width: 768px) {
     #mobile-controls {

@@ -347,16 +347,16 @@ function renderLeaderboard() {
     });
 }
 
-// 1. СЛУШАТЕЛЬ КЛАВИАТУРЫ (для компьютера)
+// СЛУШАТЕЛЬ КЛАВИАТУРЫ
 document.addEventListener('keydown', (event) => {
     if (event.key === "p" || event.key === "P" || event.key === "з" || event.key === "З" || event.key === "Escape") {
         event.preventDefault();
         togglePause();
         return;
     }
-    
+
     if (isPaused) return;
-    
+
     if (event.key === "ArrowLeft") {
         event.preventDefault();
         move(-1);
@@ -377,12 +377,9 @@ document.addEventListener('keydown', (event) => {
         event.preventDefault();
         hardDrop();
     }
-})
+}); // <-- ЗДЕСЬ ЗАКРЫВАЕТСЯ клавиатура
 
-// ==========================================
-// А ТЕПЕРЬ СНАРУЖИ - код для мобильных кнопок
-// ==========================================
-
+// МОБИЛЬНЫЕ КНОПКИ (СНАРУЖИ!)
 const btnLeft = document.getElementById('btn-left');
 const btnRight = document.getElementById('btn-right');
 const btnRotate = document.getElementById('btn-rotate');
