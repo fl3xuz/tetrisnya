@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Тетрис - вход</title>
+</head>
+<body>
+
+    <h1>🎮 Тетрис</h1>
+    <p>Введите имя игрока</p>
+
+    <input type="text" id="username" class="game-input" placeholder="Ваше имя" autocomplete="off">
+
+   <button id="start-btn" class="game-btn" onclick="startGame()">НАЧАТЬ ИГРУ</button>
+    
+    <script>
+        window.onload = function() {
+            const savedName = localStorage.getItem("tetris.username");
+            if (savedName) {
+                document.getElementById('username').value = savedName;
+            }
+        };
+
+        function startGame() {
+            const nameInput = document.getElementById('username');
+            const playerName = nameInput.value;
+            //alert("Привет, " + playerName + "!");
+
+            localStorage.setItem("tetris.username", playerName);
+
+            window.location = "main.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+body {
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+   
+}
+
+#game-area {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#side-panel {
+    background-color: #2a2a40;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 150px;
+}
+
+#info-panel {
+    background-color: #2a2a40;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#game-canvas {
+    background-color: black;
+    border: 3px solid #00d2ff;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+#next-figure {
+    background-color: black;
+    border: 2px solid #444;
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.login-container {
+    background-color: #2a2a40;     
+    width: 350px;                   
+    margin: 100px auto;       
+    padding: 40px;                  
+    border-radius: 15px;            
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;          
+}
+
+.login-container h1 {
+    color: #00d2ff;
+    margin-top: 0;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+}
+
+.game-input {
+    width: 100%;         
+    padding: 12px;   
+    margin-bottom: 20px; 
+    background-color: #1e1e2f; 
+    border: 2px solid #444;          
+    border-radius: 8px; 
+    color: #fff;  
+    font-size: 16px;
+    box-sizing: border-box;          
+    outline: none;                 
+    transition: border-color 0.3s; 
+}
+
+.game-input:focus {
+    border-color: #00d2ff;
+}
+
+.game-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00d2ff;
+    color: #1e1e2f;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer; 
+    transition: all 0.3s; 
+}
+
+.game-btn:hover {
+    background-color: #00b8e6;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+    transform: translateY(-2px); 
+}
+
+/* Стили для таблицы рекордов */
+#leaderboard-box {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+}
+
+#leaderboard-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font-size: 14px;
+}
+
+#leaderboard-list li {
+    margin-bottom: 6px;
+    color: #00d2ff; 
+    font-weight: bold;
+}

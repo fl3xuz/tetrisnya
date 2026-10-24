@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Игра Тетрис</title>
+</head>
+<body>
+    <h1>Игра Тетрис</h1>
+
+    <div id="info-panel">
+        <p>Игрок: <span id="playerName">Гость</span></p>
+        <p>Уровень: <span id="current-lvl">1</span></p>
+        <p>Очки: <span id="current-scr">0</span></p></div>
+
+        <div id="game-area">
+            <canvas id="game-canvas" width="300" height="600"></canvas>
+
+            <div id="side-panel">
+                <b>Следующая фигура</b>
+                <div id="next-figure">
+                    <canvas id="next-canvas" width="120" height="120"></canvas>
+                </div>
+                <b>Управление</b>
+                <p>«← → : Двигать»</p>
+                <p>«↑ : Повернуть»</p>
+                <p>«↓ / Пробел : Уронить»</p>
+                        <div id="leaderboard-box">
+            <b>🏆 Топ-3 игроков:</b>
+            <ul id="leaderboard-list">
+                <!-- Сюда JavaScript добавит имена и очки -->
+            </ul>
+        </div>
+            </div>
+        </div>
+
+    <p>Здесь будет игра</p>
+<script src="game.js"></script>
+</body>
+</html>
