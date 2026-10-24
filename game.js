@@ -347,15 +347,16 @@ function renderLeaderboard() {
     });
 }
 
+// 1. СЛУШАТЕЛЬ КЛАВИАТУРЫ (для компьютера)
 document.addEventListener('keydown', (event) => {
     if (event.key === "p" || event.key === "P" || event.key === "з" || event.key === "З" || event.key === "Escape") {
         event.preventDefault();
         togglePause();
         return;
     }
-
+    
     if (isPaused) return;
-
+    
     if (event.key === "ArrowLeft") {
         event.preventDefault();
         move(-1);
@@ -376,23 +377,24 @@ document.addEventListener('keydown', (event) => {
         event.preventDefault();
         hardDrop();
     }
+})
 
-    // Находим кнопки
+// ==========================================
+// А ТЕПЕРЬ СНАРУЖИ - код для мобильных кнопок
+// ==========================================
+
 const btnLeft = document.getElementById('btn-left');
 const btnRight = document.getElementById('btn-right');
 const btnRotate = document.getElementById('btn-rotate');
 const btnDown = document.getElementById('btn-down');
 const btnDrop = document.getElementById('btn-drop');
 
-// Функция-помощник, чтобы кнопки не вызывали зум и скролл на телефоне
 function preventZoom(e) {
     if (e) e.preventDefault();
 }
 
-// Привязываем действия к кнопкам
-    if (btnLeft) btnLeft.addEventListener('click', (e) => { preventZoom(e); move(-1); });
-    if (btnRight) btnRight.addEventListener('click', (e) => { preventZoom(e); move(1); });
-    if (btnRotate) btnRotate.addEventListener('click', (e) => { preventZoom(e); rotate(); });
-    if (btnDown) btnDown.addEventListener('click', (e) => { preventZoom(e); drop(true); });
-    if (btnDrop) btnDrop.addEventListener('click', (e) => { preventZoom(e); hardDrop(); });
-});
+if (btnLeft) btnLeft.addEventListener('click', (e) => { preventZoom(e); move(-1); });
+if (btnRight) btnRight.addEventListener('click', (e) => { preventZoom(e); move(1); });
+if (btnRotate) btnRotate.addEventListener('click', (e) => { preventZoom(e); rotate(); });
+if (btnDown) btnDown.addEventListener('click', (e) => { preventZoom(e); drop(true); });
+if (btnDrop) btnDrop.addEventListener('click', (e) => { preventZoom(e); hardDrop(); });

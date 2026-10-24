@@ -134,7 +134,7 @@ body {
         margin-top: 20px;
         flex-wrap: wrap; /* Если экран совсем узкий, кнопки перенесутся */
     }
-
+    
     #mobile-controls button {
         background-color: #2a2a40;
         color: #00d2ff;
@@ -144,10 +144,10 @@ body {
         width: 60px;
         height: 60px;
         cursor: pointer;
-        user-select: none; /* Запрещаем выделение текста при быстром тапе */
-        -webkit-tap-highlight-color: transparent; /* Убираем синюю подсветку при тапе на Android/iOS */
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
     }
-
+    
     #mobile-controls button:active {
         background-color: #00d2ff;
         color: #1e1e2f;
